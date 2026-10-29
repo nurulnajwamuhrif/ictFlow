@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+:root {
+  --neo-bg: #e0e9f6;
+  --neo-shadow: #b8c8e0;
+}
+
+body {
+  background-color: var(--neo-bg);
+  color: #1e293b;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  overflow-x: hidden;
+}
+
+@layer utilities {
+  .bg-neo-main {
+    background-color: #e0e9f6;
+  }
+
+  /* Extruded Neomorphic Card */
+  .neo-flat, .neo-card {
+    background: #e0e9f6;
+    box-shadow: 8px 8px 18px #b8c8e0, -8px -8px 18px #ffffff;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+  }
+
+  /* Sunken Inset Container / Input Field */
+  .neo-inset, .neo-inset-box {
+    background: #d8e3f3;
+    box-shadow: inset 3px 3px 6px #b8c8e0, inset -3px -3px 6px #ffffff;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  /* Solid Blue Gradient Card (Imbas QR & Primary Action Buttons) */
+  .neo-btn-gradient, .neo-blue-card {
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    color: #ffffff !important;
+    box-shadow: 6px 6px 16px rgba(37, 99, 235, 0.35),
+                inset 0px 1px 2px rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.2s ease-in-out;
+  }
+
+  .neo-btn-gradient:hover, .neo-blue-card:hover {
+    box-shadow: 8px 8px 20px rgba(37, 99, 235, 0.45),
+                inset 0px 1px 3px rgba(255, 255, 255, 0.6);
+    transform: translateY(-1px);
+  }
+
+  /* Icon Button / Nav Item Extruded */
+  .neo-button-icon {
+    background: #e0e9f6;
+    box-shadow: 4px 4px 10px #b8c8e0, -4px -4px 10px #ffffff;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    transition: all 0.2s ease;
+  }
+
+  /* Soft Logout Button */
+  .neo-btn-danger {
+    background: #e0e9f6;
+    box-shadow: 4px 4px 10px #b8c8e0, -4px -4px 10px #ffffff;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    color: #e11d48;
+    transition: all 0.2s ease;
+  }
+
+  .neo-btn-danger:hover {
+    box-shadow: inset 2px 2px 5px #b8c8e0, inset -2px -2px 5px #ffffff;
+    color: #be123c;
+  }
+
+  /* Filter Pills */
+  .neo-pill-on {
+    background: #2563eb;
+    color: #ffffff;
+    box-shadow: 3px 3px 8px rgba(37, 99, 235, 0.35);
+    border-radius: 9999px;
+  }
+
+  .neo-pill-off {
+    background: #e0e9f6;
+    color: #64748b;
+    box-shadow: 4px 4px 10px #b8c8e0, -4px -4px 10px #ffffff;
+    border-radius: 9999px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+  }
+
+  /* Decorative Background Orbs */
+  .neo-orb-blue {
+    background: radial-gradient(circle, rgba(37, 99, 235, 0.15) 0%, rgba(224, 233, 246, 0) 70%);
+  }
+}
